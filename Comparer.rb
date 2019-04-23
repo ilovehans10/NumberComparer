@@ -1,10 +1,6 @@
 class Integer
   def len
-    if self == 0
-      return 0
-    else
-      return Math.log10(self).to_i + 1
-    end
+    return self.abs == 0 ? 0 : Math.log10(self.abs).to_i + 1
   end
 end
 
@@ -14,9 +10,8 @@ class Array
   end
 end
 
-def compairer(int1,int2)
-  int1len = int1.len
-  int2len = int2.len
+def comparer(int1,int2)
+  int1len, int2len  = int1.len, int2.len
 
   if int1len == 0 or int2len == 0
     return 0
